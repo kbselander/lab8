@@ -7,3 +7,13 @@ var projects = require('../projects.json');
 exports.view = function(req, res){
   	res.render('index', projects);
 };
+
+
+exports.alternateView = function(req, res){
+  	res.render('index', {
+  		'showAlternate': true, 
+  		'projects': projects
+  	});
+};
+
+
