@@ -11,7 +11,15 @@ exports.view = function(req, res){
 
 exports.alternateView = function(req, res){
   	res.render('index', {
-  		'showAlternate': true, 
+  		'grid': false, 
+  		'projects': projects
+  	});
+};
+
+
+exports.gridView = function(req, res){
+  	res.render('index', {
+  		'grid': true, 
   		'projects': projects
   	});
 };

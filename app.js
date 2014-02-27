@@ -37,6 +37,7 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
+app.get('/grid', index.gridView);
 app.get('/alternate', index.alternateView);
 app.get('/project/:id', project.view);
 // Example route
